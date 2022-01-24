@@ -4,9 +4,19 @@ The repository to host a mirror of Communicating Scala Object (SCO) library.
 
 ## Licencing
 
-The redistribution of the SCO library is done as permitted by the Section (2) of the [Artistic Licence 2.0](https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/ArtisticLicence.txt), the licence given in the original distribution of SCO. 
+This SCO library in this repository is redistributed under the [Artistic Licence 2.0](https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/ArtisticLicence.txt), the licence given in the original distribution of SCO, as permitted by the Section (4) of the Licence. The Standard Version of the library can be obtained from [https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/](https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/).
 
-Users of the library are encouraged to refer to the original [licence agreement of SCO Library](https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/ArtisticLicence.txt) regarding further distribution of the library (e.g. in a fat Jar).
+The condition (4) of the Artistic License 2.0 applies to the Distribution of Modified Versions. This repository contains a Modified Version of the library, with the following difference:
+ - the repository only contains the src folder of the Standard Version
+ - build script has been largely altered
+   - namely, the following Ant-based files:
+     - `scalatasks.xml`
+     - `scala.properties`
+     - `build.xml`
+     - `build.properties`
+     
+     has been replaced with a SBT script [build.sbt](./build.sbt)
+   - because `testsrc` and `APP` are entirely removed from the distribution,
+     the build script no longer contains commands to build sources in these directories
 
-Everything except the SCO code in this repository is licenced under [the MIT licence](./LICENCE.md).
-This includes all the scripts, documentations and configurations related to the process of mirroring and distribution the library Jar file.
+Users of the library are encouraged to read the original [licence agreement of SCO Library](https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/ArtisticLicence.txt) regarding further distribution of the library (e.g. in a fat Jar).
