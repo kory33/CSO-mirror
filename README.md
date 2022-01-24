@@ -15,7 +15,7 @@ The condition (4) of the Artistic License 2.0 applies to the Distribution of Mod
      - `build.xml`
      - `build.properties`
      
-     has been replaced with a SBT script [build.sbt](./build.sbt)
+     have been replaced with a SBT script [build.sbt](./build.sbt)
    - the build script no longer contains commands to build sources in `testsrc` and `APP` directories
      because these directories are entirely removed from the distribution
 
