@@ -9,4 +9,4 @@ The redistribution of the SCO library is done as permitted by the Section (2) of
 Users of the library are encouraged to refer to the original [licence agreement of SCO Library](https://www.cs.ox.ac.uk/people/bernard.sufrin/personal/CSO/ArtisticLicence.txt) regarding further distribution of the library (e.g. in a fat Jar).
 
 Everything except the SCO code in this repository is licenced under [the MIT licence](./LICENCE.md).
-This includes all the scripts, documentations and configurations related to mirroring and distributing the library Jar file.
+This includes all the scripts, documentations and configurations related to the process of mirroring and distribution the library Jar file.
