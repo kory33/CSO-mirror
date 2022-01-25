@@ -8,7 +8,14 @@ This SCO library in this repository is redistributed under the [Artistic Licence
 
 The condition (4) of the Artistic License 2.0 applies to the Distribution of Modified Versions. This repository contains a Modified Version of the library, with the following difference:
  - the repository only contains the `src` folder of the Standard Version
- - build script has been largely altered
+ - contents of the original `src` folder are divided into two modules
+   - `modules/macros` contains all the macro implementations
+   - `modules/lib` contains all the library code (that may depend on macros)
+
+   each of which contains source codes under their respective `main/scala` directories.
+
+   The purpose of this change is to bring the project structure closer to an ordinary multi-module sbt project. Along the way it fixes a bundle issue (see [#2](https://github.com/kory33/CSO-mirror/issues/2) for details).
+ - build configuration has been largely altered
    - namely, the following Ant-based configuration files:
      - `scalatasks.xml`
      - `scala.properties`
