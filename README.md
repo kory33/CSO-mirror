@@ -1,6 +1,17 @@
 # CSO-mirror
 
-The repository to host a mirror of Communicating Scala Object (SCO) library.
+[![](https://jitpack.io/v/kory33/CSO-mirror.svg)](https://jitpack.io/#kory33/CSO-mirror)
+
+The repository to host a mirror of Communicating Scala Object (CSO) library.
+
+## Usage
+
+Add the following to `build.sbt`:
+
+```sbt
+resolvers += "jitpack" at "https://jitpack.io"
+libraryDependencies += "com.github.kory33" % "CSO-mirror" % "1.2R5-mirror-v1"
+```
 
 ## Licencing
 
