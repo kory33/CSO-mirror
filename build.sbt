@@ -1,5 +1,5 @@
 ThisBuild / scalaVersion := "2.12.3"
-ThisBuild / version := "1.2R5"
+ThisBuild / version := "1.2R5-SNAPSHOT"
 
 ThisBuild / scalacOptions ++= Seq(
   "-language:implicitConversions",
@@ -8,21 +8,18 @@ ThisBuild / scalacOptions ++= Seq(
 
 lazy val macros =
   project
+    .in(file("modules/macros"))
     .settings(
         name := "cso-mirror-macros",
         libraryDependencies ++= Seq(
             "org.scala-lang" % "scala-reflect" % scalaVersion.value,
-        ),
-        Compile / sources := Seq(
-          file("src/io/control.scala"),
-          file("src/io/SourceLocation.scala"),
-          file("src/io/SourcePath.scala"),
         ),
         target := file("target/modules/macros"),
     )
 
 lazy val lib =
   project
+    .in(file("modules/lib"))
     .dependsOn(macros)
     .settings(
         name := "cso-mirror-lib",
@@ -30,8 +27,5 @@ lazy val lib =
             "-Xelide-below",
             "350"
         ),
-        Compile / sources :=
-          Seq(file("src/io/package.scala")) ++
-            (file("src/io/threadcso") ** "*.scala").get,
         target := file("target/modules/lib"),
     )
