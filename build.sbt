@@ -14,9 +14,9 @@ lazy val macros =
             "org.scala-lang" % "scala-reflect" % scalaVersion.value,
         ),
         Compile / sources := Seq(
-          file("src/main/io/control.scala"),
-          file("src/main/io/SourceLocation.scala"),
-          file("src/main/io/SourcePath.scala"),
+          file("src/io/control.scala"),
+          file("src/io/SourceLocation.scala"),
+          file("src/io/SourcePath.scala"),
         ),
         target := file("target/modules/macros"),
     )
@@ -31,7 +31,7 @@ lazy val lib =
             "350"
         ),
         Compile / sources :=
-          Seq(file("src/main/io/package.scala")) ++
-            (file("src/main/io/threadcso") ** "*.scala").get,
+          Seq(file("src/io/package.scala")) ++
+            (file("src/io/threadcso") ** "*.scala").get,
         target := file("target/modules/lib"),
     )
