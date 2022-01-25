@@ -25,7 +25,7 @@ lazy val lib =
   project
     .dependsOn(macros)
     .settings(
-        name := "sco-mirror-lib",
+        name := "cso-mirror-lib",
         scalacOptions ++= Seq(
             "-Xelide-below",
             "350"
